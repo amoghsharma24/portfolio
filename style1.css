@@ -57,7 +57,7 @@ nav ul li a:hover {
 /* Hero Section */
 .hero {
     background: 
-    url('images/terra_incognita_by_andrewmaleskiart_deuktsl.jpg'), 
+    url('images1/png-clipart-radiohead-bear-logo-music-stars-radiohead.png'), 
     linear-gradient(0deg, #000000dd 50%, #ffffff44 100%);
     color: white;
     height: 100vh;
@@ -146,18 +146,6 @@ footer {
     font-size: 1rem;
     background: radial-gradient(circle, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 1) 100%);
     box-shadow: 0 -2px 10px rgba(255, 255, 255, 0.1);
-}
-
-body::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: url('starry-background.png') repeat; /* Background image of stars */
-    animation: starry-background 200s linear infinite;
-    z-index: -1;
 }
 
 /* Responsive Design */
