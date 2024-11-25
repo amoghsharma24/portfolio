@@ -10,19 +10,18 @@ const Hero = () => {
       <Boxes />
       <div className="flex justify-center relative my-20 z-10">
         <div className="max-w-[89vw] md:max-w-2xl lg:max-w-[60vw] flex flex-col items-center justify-center">
-          <p className="uppercase tracking-widest text-xs text-center text-blue-100 max-w-80">
-            Random ahh text
-          </p>
+          <div className="flex flex-col items-center justify-center text-center space-y-4">
+            {/* Title */}
+            <TextGenerateEffect
+              words={"Hello! Welcome to My Portfolio"}
+            ></TextGenerateEffect>
 
-          <TextGenerateEffect
-            words="Hey! Welcome to my Portfolio"
-            className="text-center text-[40px] md:text-5xl lg:text-6xl"
-          />
-
-          <p className="text-center md:tracking-wider mb-4 text-sm md:text-lg lg:text-2xl color: text-white-200">
-            Hi! I&apos;m Amogh, a Student and Full-Stack developer based in
-            Melbourne, Australia.
-          </p>
+            {/* Subtitle */}
+            <h2 className="text-lg md:text-xl lg:text-3xl font-medium tracking-wide text-white max-w-2xl">
+              Hi! I&apos;m Amogh, a Student and Full-Stack Developer based in
+              Melbourne, Australia.
+            </h2>
+          </div>
 
           <a href="#about">
             <MagicButton
