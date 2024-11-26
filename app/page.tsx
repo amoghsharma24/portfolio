@@ -1,31 +1,20 @@
-"use client";
+import Hero from "@/components/pages/Hero";
 
-import { navItems } from "@/data";
+// export const metadata: Metadata = {
+//   title: "Amogh's Portfolio",
+//   description: "The personal portfolio of Amogh, a developer based in Melbourne.",
+// };
 
-import Hero from "@/components/Hero";
-// import Grid from "@/components/Grid";
-// import Footer from "@/components/Footer";
-// import Clients from "@/components/Clients";
-// import Approach from "@/components/Approach";
-// import Experience from "@/components/Experience";
-// import RecentProjects from "@/components/RecentProjects";
-import { FloatingNav } from "../components/ui/FloatingNavBar";
-
-const Home = () => {
+export default function Page() {
   return (
-    <main className="relative bg-black-100 flex justify-center items-center flex-col overflow-hidden mx-auto sm:px-10 px-5">
-      <div className="max-w-7xl w-full">
-        <FloatingNav navItems={navItems} />
-        <Hero />
-        {/* <Grid />
-        <RecentProjects />
-        <Clients />
-        <Experience />
-        <Approach />
-        <Footer /> */}
-      </div>
-    </main>
+    <div className="min-h-screen">
+      {/* <StatusBar /> */}
+      <Hero />
+      {/* <Experience /> */}
+      {/* <Projects /> */}
+      {/* <Blog /> */}
+      <div className="md:block hidden">{/* <Gallery /> */}</div>
+      {/* <Contact /> */}
+    </div>
   );
-};
-
-export default Home;
+}

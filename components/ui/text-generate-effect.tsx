@@ -7,7 +7,7 @@ export const TextGenerateEffect = ({
   words,
   className,
   filter = true,
-  duration = 0.5,
+  duration = 0.1,
 }: {
   words: string;
   className?: string;
@@ -38,7 +38,7 @@ export const TextGenerateEffect = ({
           return (
             <motion.span
               key={word + idx}
-              className="opacity-0 text-transparent bg-gradient-to-r from-white-200 via-blue-500 to-[#1E3C72] bg-clip-text font-extrabold text-[32px] sm:text-5xl md:text-6xl lg:text-7xl leading-tight tracking-wide mx-2"
+              className="text-gray-900 font-extrabold text-4xl sm:text-5xl md:text-6xl lg:text-7xl leading-tight tracking-tight mx-auto"
               style={{
                 filter: filter ? "blur(10px)" : "none",
               }}
