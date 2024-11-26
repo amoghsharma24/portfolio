@@ -2,7 +2,6 @@
 
 import React from "react";
 import { Boxes } from "@/components/ui/background-boxes";
-// import NavSheet from "../global/nav-sheet";
 
 import Link from "next/link";
 import { motion } from "framer-motion";
@@ -12,6 +11,7 @@ import { GrGithub } from "react-icons/gr";
 import { BsInstagram } from "react-icons/bs";
 import { FaLetterboxd } from "react-icons/fa6";
 import { MdEmail } from "react-icons/md";
+import { FloatingNav } from "../ui/FloatingNavBar";
 
 const socialLinks = [
   {
@@ -69,7 +69,14 @@ export default function Hero() {
       <div className="md:block hidden light:hidden">
         <Boxes />
       </div>
-      {/* <NavSheet /> */}
+      <FloatingNav
+        navItems={[
+          { name: "About", link: "#about" },
+          { name: "Projects", link: "#projects" },
+          { name: "Testimonials", link: "#testimonials" },
+          { name: "Contact", link: "#contact" },
+        ]}
+      />
       <div
         className="relative z-30 text-center px-4 md:px-10 max-w-4xl"
         id="home"
@@ -89,8 +96,9 @@ export default function Hero() {
           transition={{ delay: 0.3, duration: 0.5 }}
           className="text-2xl md:text-4xl font-serif leading-relaxed mb-8"
         >
-          Hi 👋🏽, I&apos;m Amogh. An aspiring software developer based in
-          Melbourne, Australia.
+          Hi 👋🏽, I&apos;m Amogh.
+          <br /> Fullstack Developer | Enterprise Systems Developer | AI and ML,
+          RMIT University 26&apos;
         </motion.p>
 
         <div className="flex flex-col justify-center items-center space-y-6 md:space-y-6 md:space-x-6 mt-8">
