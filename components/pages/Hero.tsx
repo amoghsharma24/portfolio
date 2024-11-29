@@ -5,12 +5,25 @@ import { Boxes } from "@/components/ui/background-boxes";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { LiaLinkedin } from "react-icons/lia";
-import { GrGithub } from "react-icons/gr";
+import { GrGithub, GrProjects } from "react-icons/gr";
 import { BsInstagram } from "react-icons/bs";
 import { FaLetterboxd } from "react-icons/fa6";
 import { MdEmail } from "react-icons/md";
-import { Menu } from "lucide-react";
-import ModernNavSheet from "../ui/nav";
+import {
+  Contact,
+  Menu,
+  MenuSquare,
+  Paperclip,
+  PersonStanding,
+  PhoneCallIcon,
+} from "lucide-react";
+import { FloatingDock } from "../ui/floating-dock";
+import { IconBrandGithub, IconExchange, IconHome } from "@tabler/icons-react";
+import { HiHomeModern } from "react-icons/hi2";
+import { FaHome } from "react-icons/fa";
+import { label } from "framer-motion/client";
+import ThemeToggle from "../theme/theme-toggle";
+import { ThemeProvider } from "next-themes";
 
 const socialLinks = [
   {
@@ -68,7 +81,57 @@ export default function Hero() {
       <div className="md:block hidden light:hidden">
         <Boxes />
       </div>
-      <ModernNavSheet />
+      <div className=" mt-20 flex items-center justify-between px-6 shadow-lg fixed top-0 z-50">
+        <FloatingDock
+          items={[
+            {
+              title: "Home",
+              icon: <FaHome className="w-6 h-6" />,
+              href: "#home",
+            },
+            {
+              title: "Projects",
+              icon: <GrProjects className="w-6 h-6" />,
+              href: "#projects",
+            },
+            {
+              title: "Contact",
+              icon: <Contact className="w-6 h-6" />,
+              href: "#contact",
+            },
+            {
+              title: "About",
+              icon: <MenuSquare className="w-6 h-6" />,
+              href: "#about",
+            },
+            {
+              title: "Testimonials",
+              icon: <PersonStanding className="w-6 h-6" />,
+              href: "#testimonials",
+            },
+            {
+              title: "GitHub",
+              icon: (
+                <IconBrandGithub className="h-full w-full text-neutral-500 dark:text-neutral-300" />
+              ),
+              href: "#",
+            },
+            {
+              title: "Resume",
+              icon: (
+                <Paperclip className="h-full w-full text-neutral-500 dark:text-neutral-300" />
+              ),
+              href: "#",
+            },
+            {
+              title: "Theme Toggle",
+              icon: <ThemeToggle />,
+              href: "",
+            },
+          ]}
+        />
+      </div>
+
       <div
         className="relative z-30 text-center px-4 md:px-10 max-w-4xl"
         id="home"
