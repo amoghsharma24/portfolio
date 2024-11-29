@@ -1,4 +1,5 @@
 import Hero from "@/components/pages/Hero";
+import Nav from "@/components/ui/nav";
 
 // export const metadata: Metadata = {
 //   title: "Amogh's Portfolio",
@@ -13,7 +14,9 @@ export default function Page() {
       {/* <Experience /> */}
       {/* <Projects /> */}
       {/* <Blog /> */}
-      <div className="md:block hidden">{/* <Gallery /> */}</div>
+      {/* <div className="md:block hidden"> */}
+      {/* <Gallery /> */}
+      {/* </div> */}
       {/* <Contact /> */}
     </div>
   );
