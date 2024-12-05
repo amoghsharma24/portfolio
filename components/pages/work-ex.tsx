@@ -17,15 +17,6 @@ import { SectionContainer } from "../ui/section-container";
 export default function Experience() {
   const experiences = [
     {
-      title: "Associate Member",
-      company: "ACS",
-      duration: "Feb 2024 - Current",
-      location: "Melbourne, Australia",
-      description: [""],
-      links: [{ url: "https://www.acs.org.au/", label: "ACS" }],
-      skills: [],
-    },
-    {
       title: "Summer Intern",
       company: "name of company",
       duration: "Dec 2024 - Feb 2025",
@@ -33,6 +24,15 @@ export default function Experience() {
       description: ["update this"],
       skills: ["Javascript", "C++", "Data Structures"],
       links: [{ url: "https://www.google.com/", label: "name of company" }],
+    },
+    {
+      title: "Associate Member",
+      company: "ACS",
+      duration: "Feb 2024 - Current",
+      location: "Melbourne, Australia",
+      description: [""],
+      links: [{ url: "https://www.acs.org.au/", label: "ACS" }],
+      skills: [],
     },
   ];
 
