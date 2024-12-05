@@ -1,6 +1,5 @@
 import Hero from "@/components/pages/Hero";
 import Experience from "@/components/pages/work-ex";
-import Nav from "@/components/ui/floating-dock";
 
 // export const metadata: Metadata = {
 //   title: "Amogh's Portfolio",
@@ -12,7 +11,7 @@ export default function Page() {
     <div className="min-h-screen">
       {/* <StatusBar /> */}
       <Hero />
-      {/* <Experience /> */}
+      <Experience />
       {/* <Projects /> */}
       <div className="md:block hidden">{/* <Gallery /> */}</div>
       {/* <Contact /> */}

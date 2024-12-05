@@ -35,47 +35,51 @@ const FloatingDockMobile = ({
   items: { title: string; icon: React.ReactNode; href: string }[];
   className?: string;
 }) => {
-  const [open, setOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState(false);
+  const containerRef = useRef<HTMLDivElement>(null);
+  const spring = useSpring(0, { stiffness: 1000 });
+
+  const handleToggle = () => {
+    setIsOpen((prev) => {
+      if (prev) {
+        spring.set(0);
+      } else {
+        spring.set(1);
+      }
+      return !prev;
+    });
+  };
+
+  const handleAnimate = useTransform(
+    spring,
+    [0, 1],
+    ["translateY(100px)", "translateY(0px)"]
+  );
+
   return (
     <div className={cn("relative block md:hidden", className)}>
-      <AnimatePresence>
-        {open && (
-          <motion.div
-            layoutId="nav"
-            className="absolute bottom-full mb-2 inset-x-0 flex flex-col gap-2 "
-          >
-            {items.map((item, idx) => (
-              <motion.div
-                key={item.title}
-                initial={{ opacity: 0, y: 10 }}
-                animate={{
-                  opacity: 1,
-                  y: 0,
-                }}
-                exit={{
-                  opacity: 0,
-                  y: 10,
-                  transition: {
-                    delay: idx * 0.05,
-                  },
-                }}
-                transition={{ delay: (items.length - 1 - idx) * 0.05 }}
+      {isOpen && (
+        <motion.div
+          ref={containerRef}
+          className="absolute bottom-0 right-0 mb-2 mr-2 flex flex-col gap-2"
+          style={{ y: handleAnimate }}
+        >
+          {items.map((item, index) => (
+            <motion.div key={item.title} transition={{ delay: index * 0.05 }}>
+              <Link
+                href={item.href}
+                className="h-10 w-10 rounded-full bg-gray-50 dark:bg-neutral-900 flex items-center justify-center ml-20"
               >
-                <Link
-                  href={item.href}
-                  key={item.title}
-                  className="h-10 w-10 rounded-full bg-gray-50 dark:bg-neutral-900 flex items-center justify-center"
-                >
-                  <div className="h-4 w-4">{item.icon}</div>
-                </Link>
-              </motion.div>
-            ))}
-          </motion.div>
-        )}
-      </AnimatePresence>
+                <div className="h-4 w-4">{item.icon}</div>
+              </Link>
+            </motion.div>
+          ))}
+        </motion.div>
+      )}
       <button
-        onClick={() => setOpen(!open)}
+        onClick={handleToggle}
         className="h-10 w-10 rounded-full bg-gray-50 dark:bg-neutral-800 flex items-center justify-center"
+        aria-describedby="toggle theme"
       >
         <IconLayoutNavbarCollapse className="h-5 w-5 text-neutral-500 dark:text-neutral-400" />
       </button>
