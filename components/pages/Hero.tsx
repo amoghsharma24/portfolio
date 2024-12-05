@@ -5,7 +5,7 @@ import { Boxes } from "@/components/ui/background-boxes";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { LiaLinkedin } from "react-icons/lia";
-import { GrGithub, GrProjects } from "react-icons/gr";
+import { GrGithub, GrProjects, GrSpotify } from "react-icons/gr";
 import { BsInstagram } from "react-icons/bs";
 import { FaLetterboxd } from "react-icons/fa6";
 import { MdEmail } from "react-icons/md";
@@ -24,6 +24,7 @@ import { FaHome } from "react-icons/fa";
 import { label } from "framer-motion/client";
 import ThemeToggle from "../theme/theme-toggle";
 import { ThemeProvider } from "next-themes";
+import { PiSpotifyLogoDuotone } from "react-icons/pi";
 
 const socialLinks = [
   {
@@ -45,6 +46,11 @@ const socialLinks = [
     icon: <BsInstagram className="w-6 h-6" />,
     href: "https://www.instagram.com",
     label: "Instagram",
+  },
+  {
+    icon: <GrSpotify className="w-6 h-6" />,
+    href: "https://www.spotify.com",
+    label: "Spotify",
   },
 ];
 
