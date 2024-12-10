@@ -7,24 +7,12 @@ import { motion } from "framer-motion";
 import { LiaLinkedin } from "react-icons/lia";
 import { GrGithub, GrProjects, GrSpotify } from "react-icons/gr";
 import { BsInstagram } from "react-icons/bs";
-import { FaLetterboxd } from "react-icons/fa6";
 import { MdEmail } from "react-icons/md";
-import {
-  Contact,
-  Menu,
-  MenuSquare,
-  Paperclip,
-  PersonStanding,
-  PhoneCallIcon,
-} from "lucide-react";
+import { Contact, MenuSquare, Paperclip, PersonStanding } from "lucide-react";
 import { FloatingDock } from "../ui/floating-dock";
-import { IconBrandGithub, IconExchange, IconHome } from "@tabler/icons-react";
-import { HiHomeModern } from "react-icons/hi2";
+import { IconBrandGithub } from "@tabler/icons-react";
 import { FaHome } from "react-icons/fa";
-import { label } from "framer-motion/client";
 import ThemeToggle from "../theme/theme-toggle";
-import { ThemeProvider } from "next-themes";
-import { PiSpotifyLogoDuotone } from "react-icons/pi";
 
 const socialLinks = [
   {
